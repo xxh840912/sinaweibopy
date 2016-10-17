@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-__version__ = '1.1.4'
+__version__ = '1.1.5'
 __author__ = 'Liao Xuefeng (askxuefeng@gmail.com)'
 
 '''
@@ -242,7 +242,7 @@ class APIClient(object):
                 _encode_params(client_id = self.client_id, \
                         response_type = response_type, \
                         redirect_uri = redirect, **kw))
-                        
+
     def _parse_access_token(self, r):
         '''
         new:return access token as a JsonDict: {"access_token":"your-access-token","expires_in":12345678,"uid":1234}, expires_in is represented using standard unix-epoch-time
@@ -255,7 +255,7 @@ class APIClient(object):
             if rtime < expires:
                 expires = rtime
         return JsonDict(access_token=r.access_token, expires=expires, expires_in=expires, uid=r.get('uid', None))
-        
+
     def request_access_token(self, code, redirect_uri=None):
         redirect = redirect_uri if redirect_uri else self.redirect_uri
         if not redirect:
