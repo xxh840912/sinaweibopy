@@ -1,6 +1,4 @@
 from distutils.core import setup
-import sys
-
 import weibo
 
 kw = dict(
@@ -12,7 +10,7 @@ kw = dict(
     author_email='ifanrx@ifanr.com',
     url='https://github.com/ifanrx/sinaweibopy',
     download_url='https://github.com/ifanrx/sinaweibopy',
-    py_modules=['weibo'],
+    py_modules=['weibo', 'weibo3'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
