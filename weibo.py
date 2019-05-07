@@ -302,9 +302,6 @@ class _Executable(object):
         method = _METHOD_MAP[self._method]
         if method==_HTTP_POST and 'pic' in kw:
             method = _HTTP_UPLOAD
-        if self._path == "statuses/user_timeline":
-            kw["source"] = _app_key
-            kw["access_token"] = _authorize_code
         return _http_call('%s%s.json' % (self._client.api_url, self._path), method, self._client.access_token, **kw)
 
     def __str__(self):
