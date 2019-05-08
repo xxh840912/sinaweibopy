@@ -13,7 +13,7 @@ kw = dict(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python 3.6',
+        'Programming Language :: Python :: 3.6',
         'Topic :: Internet',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ])
